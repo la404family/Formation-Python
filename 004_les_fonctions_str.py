@@ -11,8 +11,21 @@ print(f"Chaîne en majuscules : {chaine_majuscule}")
 chaine_minuscule = chaines_de_caracteres.lower()
 print(f"Chaîne en minuscules : {chaine_minuscule}")
 # Remplacer une sous-chaîne par une autre
-chaine_remplacee = chaines_de_caracteres.replace("chaîne", "texte")
+chaine_remplacee = chaines_de_caracteres.replace("chaîne", "ligne")
 print(f"Chaîne après remplacement : {chaine_remplacee}")
+# Supprimer les espaces au début et à la fin de la chaîne
+chaine_espaces_supprimes = chaines_de_caracteres.strip()
+print(f"Chaîne sans espaces : {chaine_espaces_supprimes}")
+# Supprimer des caractères spécifiques au début et à la fin de la chaîne
+chaine_caracteres_specifiques = chaines_de_caracteres.strip("Bonjour, .")
+print(
+    f"Chaîne sans les caractères 'Bonjour, .' : {chaine_caracteres_specifiques}")
+# Supprimer les espaces au début de la chaîne
+chaine_espaces_debut = chaines_de_caracteres.lstrip()
+print(f"Chaîne sans espaces au début : {chaine_espaces_debut}")
+# Supprimer les espaces à la fin de la chaîne
+chaine_espaces_fin = chaines_de_caracteres.rstrip()
+print(f"Chaîne sans espaces à la fin : {chaine_espaces_fin}")
 # Diviser la chaîne en une liste de mots
 liste_de_mots = chaines_de_caracteres.split()
 print(f"Liste de mots : {liste_de_mots}")
