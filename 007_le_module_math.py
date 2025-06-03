@@ -1,5 +1,16 @@
 import math
 
+# les operateurs mathématiques de base
+# Addition
+addition = 5 + 3
+# Soustraction
+soustraction = 10 - 4
+# Multiplication
+multiplication = 6 * 7
+# Division (elle renvoie un float)
+division = 20 / 4
+
+
 # présentation des fonctions du module math
 variable_float = 3.14658468
 variable_int = 427

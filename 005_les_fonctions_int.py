@@ -29,3 +29,10 @@ print(f"{int_a} est plus grand ou égal à {int_b} : {est_plus_grand_ou_egal}")
 # Comparer deux entiers (plus petit ou égal)
 est_plus_petit_ou_egal = int_a <= int_b
 print(f"{int_a} est plus petit ou égal à {int_b} : {est_plus_petit_ou_egal}")
+# Compléter un entier avec des zéros à gauche
+int_a = 5
+int_b = 42
+int_a_zfill = str(int_a).zfill(3)
+int_b_zfill = str(int_b).zfill(3)
+print(f"{int_a} avec zfill : {int_a_zfill}")
+print(f"{int_b} avec zfill : {int_b_zfill}")

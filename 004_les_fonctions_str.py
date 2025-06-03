@@ -67,3 +67,10 @@ print(f"La chaîne est un espace : {est_espace}")
 # Vérifier si la chaîne est vide
 est_vide = not chaines_de_caracteres
 print(f"La chaîne est vide : {est_vide}")
+# counter le nombre d'occurrences d'une sous-chaîne
+sous_chaine = "chaîne"
+nombre_occurrences = chaines_de_caracteres.count(sous_chaine)
+print(f"Le nombre d'occurrences de '{sous_chaine}' est : {nombre_occurrences}")
+# Vérifier si la chaîne est un identifiant Python valide
+est_identifiant = chaines_de_caracteres.isidentifier()
+print(f"La chaîne est un identifiant Python valide : {est_identifiant}")
