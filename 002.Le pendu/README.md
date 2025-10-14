@@ -331,7 +331,3 @@ Ce projet est développé dans le cadre de la Formation Python pour des fins éd
 - **Base de mots français** (109,280 mots inclus)
 
 ---
-
-**Amusez-vous bien avec le Jeu du Pendu ! 🎉**
-
-_Version 1.0 - Octobre 2025_
