@@ -54,6 +54,132 @@
 - **[`007` 📐 Module math](007_le_module_math.py)**  
   Fonctions mathématiques avancées
 
+- **[`008` ⚖️ Opérateurs de comparaison](008_operateurs_comparaison.py)**  
+  ==, !=, <, >, <=, >=
+
+- **[`009` 🔀 Conditions (if/elif/else)](009_conditions.py)**  
+  Structures conditionnelles et branchements
+
+- **[`010` 🔁 Boucle while](010_boucle_while.py)**  
+  Répétitions conditionnelles
+
+- **[`011` 🔂 Boucle for](011_boucle_for.py)**  
+  Itérations sur séquences
+
+- **[`012` 🎯 Break, continue, pass](012_controle_flux.py)**  
+  Contrôle de flux dans les boucles
+
+- **[`013` 📋 Listes (list)](013_listes.py)**  
+  Création, manipulation, méthodes
+
+- **[`014` 🔧 Méthodes de listes](014_methodes_listes.py)**  
+  append, insert, remove, sort, etc.
+
+- **[`015` 📑 Tuples (tuple)](015_tuples.py)**  
+  Séquences immuables
+
+- **[`016` 📖 Dictionnaires (dict)](016_dictionnaires.py)**  
+  Paires clé-valeur, accès, modification
+
+- **[`017` 🎲 Ensembles (set)](017_ensembles.py)**  
+  Collections non ordonnées, opérations mathématiques
+
+- **[`018` 🔄 Compréhensions](018_comprehensions.py)**  
+  List, dict, set comprehensions
+
+- **[`019` 🎪 Définir des fonctions](019_definir_fonctions.py)**  
+  def, paramètres, return
+
+- **[`020` 📦 Arguments et paramètres](020_arguments_parametres.py)**  
+  Positionnels, nommés, \*args, \*\*kwargs
+
+- **[`021` 🌐 Portée des variables](021_portee_variables.py)**  
+  local, global, nonlocal
+
+- **[`022` 🎭 Fonctions lambda](022_fonctions_lambda.py)**  
+  Fonctions anonymes
+
+- **[`023` 🎁 Fonctions intégrées](023_fonctions_integrees.py)**  
+  map, filter, zip, enumerate, range
+
+- **[`024` ⚠️ Exceptions](024_exceptions.py)**  
+  try, except, else, finally
+
+- **[`025` 🎯 Lever des exceptions](025_lever_exceptions.py)**  
+  raise, exceptions personnalisées
+
+- **[`026` 📁 Lecture de fichiers](026_lecture_fichiers.py)**  
+  open, read, readline, readlines
+
+- **[`027` ✍️ Écriture de fichiers](027_ecriture_fichiers.py)**  
+  write, append, modes d'ouverture
+
+- **[`028` 🗂️ Context managers](028_context_managers.py)**  
+  with statement, gestion automatique
+
+- **[`029` 🏗️ Classes et objets](029_classes_objets.py)**  
+  Définition, instanciation
+
+- **[`030` 🎯 Attributs et méthodes](030_attributs_methodes.py)**  
+  self, `__init__`, méthodes d'instance
+
+- **[`031` 🔒 Encapsulation](031_encapsulation.py)**  
+  Public, privé (\_), très privé (\_\_)
+
+- **[`032` 👨‍👦 Héritage](032_heritage.py)**  
+  Sous-classes, super()
+
+- **[`033` 🎭 Polymorphisme](033_polymorphisme.py)**  
+  Surcharge de méthodes
+
+- **[`034` 🔮 Méthodes spéciales](034_methodes_speciales.py)**  
+  `__str__`, `__repr__`, `__len__`, etc.
+
+- **[`035` 📊 Properties](035_properties.py)**  
+  @property, getters, setters
+
+- **[`036` 📦 Importer des modules](036_importer_modules.py)**  
+  import, from...import, as
+
+- **[`037` 🔨 Créer des modules](037_creer_modules.py)**  
+  Organisation du code
+
+- **[`038` 📚 Packages](038_packages.py)**  
+  `__init__.py`, structure de projet
+
+- **[`039` 🌍 Modules standards](039_modules_standards.py)**  
+  os, sys, datetime, random, json
+
+- **[`040` 🎨 Décorateurs](040_decorateurs.py)**  
+  @decorator, fonctions d'ordre supérieur
+
+- **[`041` 🔄 Générateurs](041_generateurs.py)**  
+  yield, expressions génératrices
+
+- **[`042` 🔗 Itérateurs](042_iterateurs.py)**  
+  `__iter__`, `__next__`, protocole d'itération
+
+- **[`043` 📝 Type hints](043_type_hints.py)**  
+  Annotations de types
+
+- **[`044` 🧵 Context managers personnalisés](044_context_managers_personnalises.py)**  
+  `__enter__`, `__exit__`
+
+- **[`045` 🗂️ Collections](045_collections.py)**  
+  defaultdict, Counter, deque, namedtuple
+
+- **[`046` 🔤 Expressions régulières (re)](046_expressions_regulieres.py)**  
+  Patterns, recherche, substitution
+
+- **[`047` 📅 Module datetime](047_module_datetime.py)**  
+  Dates, heures, timedelta
+
+- **[`048` 🎲 Module random avancé](048_module_random.py)**  
+  Distributions, échantillonnage
+
+- **[`049` 🗄️ Module json](049_module_json.py)**  
+  Sérialisation, parsing
+
 ---
 
 ## 🎮 Projets pratiques
