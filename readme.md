@@ -36,7 +36,7 @@
 - **[`001` 🏷️ Types de variables](001_les_types_de_variables.py)**  
   int, float, str, bool, complexes
 
-- **[`002` 📦 Variables](002_les_Variables.py)**  
+- **[`002` 📦 Variables](002_les_variables.py)**  
   Déclaration, affectation, portée
 
 - **[`003` 🔄 Conversions](003_les_conversions.py)**  
