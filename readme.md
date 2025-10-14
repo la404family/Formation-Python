@@ -163,7 +163,7 @@
   Annotations de types
 
 - **[`044` 🧵 Context managers personnalisés](044_context_managers_personnalises.py)**  
-  `__enter__`, `__exit__`
+  enter, exit
 
 - **[`045` 🗂️ Collections](045_collections.py)**  
   defaultdict, Counter, deque, namedtuple
@@ -179,6 +179,78 @@
 
 - **[`049` 🗄️ Module json](049_module_json.py)**  
   Sérialisation, parsing
+
+- **[`050` 🧰 Programmation modulaire](050_programmation_modulaire.py)**  
+  Organisation en packages, séparation logique du code, imports relatifs, bonnes pratiques PEP8
+
+- **[`051` 🧪 Tests unitaires](051_tests_unitaires.py)**  
+  unittest, pytest, mock, tests paramétrés, couverture de code
+
+- **[`052` 🧾 Logging et débogage](052_logging_debogage.py)**  
+  logging, niveaux (DEBUG, INFO…), gestion des logs dans des fichiers, inspection avec pdb
+
+- **[`053` ⚙️ Automatisation système](053_automatisation_systeme.py)**  
+  Scripts utilitaires : renommage de fichiers, sauvegardes, interaction avec os, pathlib, subprocess
+
+- **[`054` 📬 Scripts CLI](054_scripts_cli.py)**  
+  argparse, click, création d'outils exécutables en ligne de commande
+
+- **[`060` 🌍 Requêtes HTTP et APIs](060_requetes_http_apis.py)**  
+  requests, récupération de données, authentification, JSON, APIs publiques (GitHub, OpenWeather...)
+
+- **[`061` 💾 Bases de données](061_bases_donnees.py)**  
+  sqlite3, ORM (SQLAlchemy), introduction à MongoDB
+
+- **[`062` 🌐 Développement web backend](062_developpement_web.py)**  
+  Introduction à Flask ou FastAPI, routage, templates, endpoints, JSON response
+
+- **[`063` 🔁 API REST complète](063_api_rest.py)**  
+  CRUD, validation, gestion d'erreurs, documentation automatique (Swagger/OpenAPI)
+
+- **[`064` 🧰 Interfaces graphiques](064_interfaces_graphiques.py)**  
+  Tkinter, PyQt, ou customtkinter — création d'interfaces simples
+
+- **[`070` 📈 Analyse de données avec pandas](070_pandas.py)**  
+  Séries, DataFrames, filtrage, groupby, import/export (CSV, Excel, JSON)
+
+- **[`071` 📊 Visualisation](071_visualisation.py)**  
+  matplotlib, seaborn, graphiques et tableaux de bord de base
+
+- **[`072` 🧮 NumPy et calcul scientifique](072_numpy.py)**  
+  Tableaux multidimensionnels, vecteurs, matrices, algèbre linéaire
+
+- **[`073` 🧠 Introduction aux algorithmes](073_algorithmes.py)**  
+  Recherche, tri, complexité, structures de données, notions d'optimisation
+
+- **[`074` 🧩 Initiation à l'IA et ML](074_ia_machine_learning.py)**  
+  scikit-learn, régression linéaire, classification, preprocessing
+
+- **[`080` 🔀 Multithreading et multiprocessing](080_multithreading.py)**  
+  Threads, Process, asynchronisme avec asyncio
+
+- **[`081` 🧩 Design patterns](081_design_patterns.py)**  
+  Singleton, Factory, Observer, Strategy, MVC simplifié
+
+- **[`082` 🧰 Métaprogrammation](082_metaprogrammation.py)**  
+  introspection, décorateurs avancés, type(), `__new__`, métaclasses
+
+- **[`083` 🧱 Architecture logicielle avancée](083_architecture_logicielle.py)**  
+  SOLID, séparation en modules/services, bonnes pratiques de structuration de projet
+
+- **[`090` 🕹️ Développement de jeux](090_developpement_jeux.py)**  
+  Boucle de jeu, collisions, gestion d'événements, sons, animations
+
+- **[`091` 🧰 Génération procédurale](091_generation_procedurale.py)**  
+  Bruit de Perlin, génération de cartes, fractales
+
+- **[`092` 🪄 Automatisation bureautique](092_automatisation_bureautique.py)**  
+  Manipuler Excel (openpyxl), PDF (reportlab), mails (smtplib)
+
+- **[`093` 🤖 Scripts d'analyse Web](093_web_scraping.py)**  
+  BeautifulSoup, requests-html, respect du robots.txt
+
+- **[`094` 📦 Distribution d'applications](094_distribution_applications.py)**  
+  setuptools, pip, venv, pyinstaller (créer des .exe)
 
 ---
 
