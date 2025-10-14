@@ -6,7 +6,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-En%20cours-orange?style=for-the-badge)
 ![Niveau](https://img.shields.io/badge/Niveau-Débutant%20à%20Avancé-purple?style=for-the-badge)
 
 ![GitHub stars](https://img.shields.io/github/stars/la404family/Formation-Python?style=social)
