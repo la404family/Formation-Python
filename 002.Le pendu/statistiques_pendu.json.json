@@ -1,0 +1,13 @@
+{
+  "parties_jouees": 5,
+  "parties_gagnees": 2,
+  "parties_perdues": 3,
+  "pourcentage_victoire": 40.0,
+  "mot_le_plus_long": "psittacose",
+  "meilleur_score": 2,
+  "total_erreurs": 24,
+  "mots_trouves": [
+    "matériel",
+    "psittacose"
+  ]
+}
