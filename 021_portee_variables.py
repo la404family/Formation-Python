@@ -1196,50 +1196,7 @@ except ValueError as e:
     print(f"   ❌ Erreur attendue : {e}")
 
 print("\n" + "=" * 50)
-print("10. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À IMPLÉMENTER :
-
-🎯 Exercice 1 : Gestionnaire de configuration hiérarchique
-Créez un système de configuration avec :
-• Config globale, par environnement, par module
-• Héritage et surcharge de valeurs
-• Validation et rollback
-• Cache intelligent
-
-🔒 Exercice 2 : Système de permissions avec scopes
-Créez un système de permissions :
-• Scopes imbriqués (global, org, projet, resource)  
-• Héritage de permissions
-• Validation en temps réel
-• Audit trail
-
-🏭 Exercice 3 : Factory de decorateurs avec contexte
-Créez une factory qui génère des décorateurs :
-• Contexte partagé entre décorateurs
-• Configuration par environnement
-• Logging et métriques
-• Gestion d'erreurs
-
-🧮 Exercice 4 : Calculateur d'expressions avec variables
-Créez un évaluateur d'expressions :
-• Variables locales et globales
-• Fonctions personnalisées dans le scope
-• Sécurité et sandboxing
-• Cache de compilation
-
-🎮 Exercice 5 : Système de hooks avec callbacks
-Créez un système de hooks :
-• Registration de callbacks par scope
-• Exécution séquentielle ou parallèle
-• Gestion d'erreurs et rollback
-• Métriques de performance
-""")
-
-print("\n" + "=" * 50)
-print("11. RÉSUMÉ FINAL")
+print("10. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""

@@ -28,6 +28,7 @@ FONCTIONS LAMBDA EN PYTHON - GUIDE COMPLET
 import time
 from operator import itemgetter, attrgetter
 from functools import reduce
+
 print("=" * 70)
 print("FONCTIONS LAMBDA EN PYTHON - GUIDE COMPLET")
 print("=" * 70)
@@ -1035,50 +1036,7 @@ print(f"   Second appel : {temps2:.2f}ms -> {resultat2}")
 print(f"   Accélération : {temps1/temps2:.0f}x")
 
 print("\n" + "=" * 50)
-print("9. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À IMPLÉMENTER :
-
-🎯 Exercice 1 : Pipeline de traitement de données
-Créez un système de pipeline avec lambdas :
-• Chaîne de transformations configurable
-• Gestion d'erreurs avec fallbacks
-• Métriques de performance
-• Cache intelligent
-
-🔧 Exercice 2 : Système de validation avancé
-Créez un validateur flexible :
-• Règles composables avec lambdas
-• Validation conditionnelle
-• Messages d'erreur personnalisés
-• Support des objets complexes
-
-🎮 Exercice 3 : Moteur de règles métier
-Créez un moteur de règles :
-• Définition de règles avec lambdas
-• Priorités et conflits
-• Contexte d'exécution
-• Audit et historique
-
-📊 Exercice 4 : Analyseur de données streaming
-Créez un analyseur temps réel :
-• Agrégations avec lambdas
-• Fenêtres glissantes
-• Alertes conditionnelles
-• Dashboard en temps réel
-
-🎨 Exercice 5 : DSL (Domain Specific Language)
-Créez un mini-langage :
-• Syntaxe avec lambdas
-• Interpréteur simple
-• Variables et fonctions
-• Exemples d'usage métier
-""")
-
-print("\n" + "=" * 50)
-print("10. RÉSUMÉ FINAL")
+print("1-1. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""

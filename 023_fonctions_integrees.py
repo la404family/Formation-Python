@@ -27,6 +27,7 @@ FONCTIONS BUILT-IN DE PYTHON - GUIDE COMPLET
 import time
 import sys
 import io
+
 print("=" * 70)
 print("FONCTIONS BUILT-IN DE PYTHON - GUIDE COMPLET")
 print("=" * 70)
@@ -1024,56 +1025,9 @@ print(f"   Avec sorted() : {temps_sorted:.2f}ms")
 print(f"   Avec min/max : {temps_builtin:.2f}ms")
 print(f"   Amélioration : {temps_sorted/temps_builtin:.2f}x plus rapide")
 
-print("\n" + "=" * 50)
-print("9. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À IMPLÉMENTER :
-
-🎯 Exercice 1 : Analyseur de logs
-Créez un analyseur utilisant les built-ins :
-• Parsing avec split() et strip()
-• Filtrage avec filter() et conditions
-• Agrégation avec sum(), min(), max()
-• Tri avec sorted() et key personnalisée
-• Statistiques avec len(), all(), any()
-
-📊 Exercice 2 : Validateur de données CSV
-Créez un validateur complet :
-• Lecture ligne par ligne avec enumerate()
-• Validation de types avec isinstance()
-• Conversion avec int(), float(), str()
-• Détection d'erreurs avec try/except
-• Rapport avec format() et print()
-
-🔧 Exercice 3 : Générateur de code SQL
-Créez un générateur utilisant les built-ins :
-• Construction avec join() et format()
-• Validation avec hasattr() et callable()
-• Sécurisation avec isinstance() et type()
-• Template avec eval() sécurisé
-• Debug avec dir() et vars()
-
-🎮 Exercice 4 : Mini-interpréteur Python
-Créez un interpréteur simple :
-• Parsing avec eval() et compile()
-• Contexte avec globals() et locals()
-• Introspection avec dir() et type()
-• Sécurité avec restriction d'imports
-• REPL avec input() et print()
-
-🏗️ Exercice 5 : Framework de tests unitaires
-Créez un framework de tests :
-• Discovery avec dir() et callable()
-• Assertion avec isinstance() et type()
-• Reporting avec format() et enumerate()
-• Statistiques avec sum(), len(), all()
-• Hooks avec hasattr() et getattr()
-""")
 
 print("\n" + "=" * 50)
-print("10. RÉSUMÉ FINAL")
+print("1-1. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""

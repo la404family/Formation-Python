@@ -276,84 +276,7 @@ for note in notes:
     print(f"   Note {note:2d}/100 : {mention}")
 
 print("\n" + "=" * 50)
-print("9. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À FAIRE (décommentez pour tester) :
-
-# Exercice 1 : Comparateur de prix
-# def comparer_prix():
-#     prix1 = float(input("Prix 1 : "))
-#     prix2 = float(input("Prix 2 : "))
-#     
-#     if prix1 == prix2:
-#         print("Les prix sont identiques")
-#     elif prix1 < prix2:
-#         print(f"Prix 1 est moins cher de {prix2 - prix1:.2f}€")
-#     else:
-#         print(f"Prix 2 est moins cher de {prix1 - prix2:.2f}€")
-
-# Exercice 2 : Vérificateur d'intervalle
-# def dans_intervalle():
-#     nombre = int(input("Entrez un nombre : "))
-#     min_val = int(input("Valeur minimale : "))
-#     max_val = int(input("Valeur maximale : "))
-#     
-#     if min_val <= nombre <= max_val:
-#         print(f"{nombre} est dans l'intervalle [{min_val}, {max_val}]")
-#     else:
-#         print(f"{nombre} n'est PAS dans l'intervalle [{min_val}, {max_val}]")
-
-# Exercice 3 : Analyseur de mot de passe
-# def analyser_mot_de_passe():
-#     mdp = input("Mot de passe : ")
-#     
-#     longueur_ok = len(mdp) >= 8
-#     a_majuscule = any(c.isupper() for c in mdp)
-#     a_minuscule = any(c.islower() for c in mdp)
-#     a_chiffre = any(c.isdigit() for c in mdp)
-#     a_special = any(c in "!@#$%^&*" for c in mdp)
-#     
-#     force = sum([longueur_ok, a_majuscule, a_minuscule, a_chiffre, a_special])
-#     
-#     if force >= 4:
-#         print("Mot de passe FORT ✅")
-#     elif force >= 3:
-#         print("Mot de passe MOYEN ⚠️")
-#     else:
-#         print("Mot de passe FAIBLE ❌")
-
-# Exercice 4 : Comparateur de listes
-# def comparer_listes():
-#     liste1 = [1, 2, 3, 4, 5]
-#     liste2 = [1, 2, 3, 4, 5]
-#     liste3 = liste1
-#     
-#     print(f"liste1 == liste2 : {liste1 == liste2}")
-#     print(f"liste1 is liste2 : {liste1 is liste2}")
-#     print(f"liste1 is liste3 : {liste1 is liste3}")
-#     print(f"id(liste1) == id(liste3) : {id(liste1) == id(liste3)}")
-
-# Exercice 5 : Calculateur d'éligibilité
-# def calculer_eligibilite():
-#     age = int(input("Âge : "))
-#     revenus = int(input("Revenus annuels : "))
-#     etudiant = input("Étudiant ? (oui/non) : ").lower() == "oui"
-#     
-#     # Conditions d'éligibilité
-#     majeur = age >= 18
-#     revenus_suffisants = revenus >= 15000
-#     condition_speciale = etudiant and age <= 25
-#     
-#     eligible = majeur and (revenus_suffisants or condition_speciale)
-#     
-#     print(f"Éligible : {'OUI' if eligible else 'NON'}")
-#     print(f"Détails : majeur={majeur}, revenus_ok={revenus_suffisants}, étudiant_jeune={condition_speciale}")
-""")
-
-print("\n" + "=" * 50)
-print("10. TABLEAU RÉCAPITULATIF")
+print("9. TABLEAU RÉCAPITULATIF")
 print("=" * 50)
 
 print("""
@@ -386,7 +309,7 @@ print("""
 """)
 
 print("\n" + "=" * 50)
-print("11. RÉSUMÉ FINAL")
+print("10. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""

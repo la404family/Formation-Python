@@ -26,6 +26,7 @@ ARGUMENTS ET PARAMÈTRES AVANCÉS EN PYTHON - GUIDE COMPLET
 
 import time
 import inspect
+
 print("=" * 70)
 print("ARGUMENTS ET PARAMÈTRES AVANCÉS - GUIDE COMPLET")
 print("=" * 70)
@@ -1228,51 +1229,7 @@ fonction_profilée("test", b="world")
 fonction_profilée.print_stats()
 
 print("\n" + "=" * 50)
-print("10. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À IMPLÉMENTER :
-
-🎯 Exercice 1 : Système de commandes flexible
-Créez un système qui peut traiter différents types de commandes :
-• commande(action, *args, **kwargs)
-• Actions : "create", "update", "delete", "search"
-• Arguments variables selon l'action
-• Validation et logging automatiques
-
-🔧 Exercice 2 : Builder de requêtes SQL
-Créez un constructeur de requêtes avec :
-• select(*colonnes)
-• where(**conditions)
-• order_by(*colonnes, desc=False)
-• limit(n)
-• Chaînage des méthodes
-
-🏭 Exercice 3 : Système de plugins
-Créez un système de plugins avec :
-• register_plugin(name, **config)
-• call_plugin(name, *args, **kwargs)
-• list_plugins(**filters)
-• Plugin discovery automatique
-
-🧮 Exercice 4 : Calculatrice d'expressions
-Créez une calculatrice qui accepte :
-• calculate(expression, **variables)
-• Variables dans l'expression
-• Fonctions personnalisées
-• Gestion d'erreurs complète
-
-🎨 Exercice 5 : Système de templates
-Créez un moteur de templates :
-• render(template, **context)
-• include(*templates)
-• Helpers et filtres personnalisés
-• Cache intelligent
-""")
-
-print("\n" + "=" * 50)
-print("11. RÉSUMÉ FINAL")
+print("10. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""

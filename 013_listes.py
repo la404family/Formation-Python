@@ -27,6 +27,7 @@ LES LISTES EN PYTHON - GUIDE COMPLET
 
 import time
 import copy
+
 print("=" * 70)
 print("LES LISTES EN PYTHON - GUIDE COMPLET")
 print("=" * 70)
@@ -544,149 +545,7 @@ print(f"📊 Matrice : {matrice}")
 print(f"📏 Aplatie : {aplatie}")
 
 print("\n" + "=" * 50)
-print("10. EXERCICES PRATIQUES")
-print("=" * 50)
-
-print("""
-💪 EXERCICES À FAIRE (décommentez pour tester) :
-
-# Exercice 1 : Gestionnaire de notes
-# def gestionnaire_notes():
-#     notes = []
-#     
-#     while True:
-#         action = input("(A)jouter, (S)upprimer, (M)oyenne, (Q)uitter : ").lower()
-#         
-#         if action == 'a':
-#             try:
-#                 note = float(input("Note (0-20) : "))
-#                 if 0 <= note <= 20:
-#                     notes.append(note)
-#                     print(f"Note {note} ajoutée")
-#                 else:
-#                     print("Note invalide")
-#             except ValueError:
-#                 print("Entrez un nombre valide")
-#         
-#         elif action == 's':
-#             if notes:
-#                 print(f"Notes : {notes}")
-#                 try:
-#                     index = int(input("Index à supprimer : "))
-#                     if 0 <= index < len(notes):
-#                         note_supprimee = notes.pop(index)
-#                         print(f"Note {note_supprimee} supprimée")
-#                     else:
-#                         print("Index invalide")
-#                 except ValueError:
-#                     print("Entrez un index valide")
-#             else:
-#                 print("Aucune note à supprimer")
-#         
-#         elif action == 'm':
-#             if notes:
-#                 moyenne = sum(notes) / len(notes)
-#                 print(f"Moyenne : {moyenne:.2f}/20")
-#                 print(f"Notes : {sorted(notes)}")
-#             else:
-#                 print("Aucune note enregistrée")
-#         
-#         elif action == 'q':
-#             break
-
-# Exercice 2 : Fusion de listes triées
-# def fusionner_listes_triees(liste1, liste2):
-#     resultat = []
-#     i, j = 0, 0
-#     
-#     while i < len(liste1) and j < len(liste2):
-#         if liste1[i] <= liste2[j]:
-#             resultat.append(liste1[i])
-#             i += 1
-#         else:
-#             resultat.append(liste2[j])
-#             j += 1
-#     
-#     # Ajouter les éléments restants
-#     resultat.extend(liste1[i:])
-#     resultat.extend(liste2[j:])
-#     
-#     return resultat
-
-# # Test
-# liste_a = [1, 3, 5, 7, 9]
-# liste_b = [2, 4, 6, 8, 10, 11, 12]
-# fusionnee = fusionner_listes_triees(liste_a, liste_b)
-# print(f"Fusion : {fusionnee}")
-
-# Exercice 3 : Rotation de liste
-# def rotation_liste(liste, k):
-#     \"\"\"Effectue une rotation de k positions vers la droite\"\"\"
-#     if not liste or k == 0:
-#         return liste
-#     
-#     k = k % len(liste)  # Gérer les rotations > longueur
-#     return liste[-k:] + liste[:-k]
-
-# # Test
-# original = [1, 2, 3, 4, 5, 6, 7]
-# rotee = rotation_liste(original, 3)
-# print(f"Original : {original}")
-# print(f"Rotation 3 : {rotee}")
-
-# Exercice 4 : Recherche de sous-séquence
-# def trouver_sous_sequence(liste, sous_seq):
-#     \"\"\"Trouve toutes les positions d'une sous-séquence\"\"\"
-#     positions = []
-#     
-#     for i in range(len(liste) - len(sous_seq) + 1):
-#         if liste[i:i+len(sous_seq)] == sous_seq:
-#             positions.append(i)
-#     
-#     return positions
-
-# # Test
-# sequence = [1, 2, 3, 2, 3, 4, 2, 3, 5]
-# motif = [2, 3]
-# positions = trouver_sous_sequence(sequence, motif)
-# print(f"Séquence : {sequence}")
-# print(f"Motif {motif} trouvé aux positions : {positions}")
-
-# Exercice 5 : Matrice transposée
-# def transposer_matrice(matrice):
-#     \"\"\"Transpose une matrice (lignes ↔ colonnes)\"\"\"
-#     if not matrice or not matrice[0]:
-#         return []
-#     
-#     lignes = len(matrice)
-#     colonnes = len(matrice[0])
-#     
-#     transposee = []
-#     for j in range(colonnes):
-#         nouvelle_ligne = []
-#         for i in range(lignes):
-#             nouvelle_ligne.append(matrice[i][j])
-#         transposee.append(nouvelle_ligne)
-#     
-#     return transposee
-
-# # Test
-# matrice_originale = [
-#     [1, 2, 3],
-#     [4, 5, 6],
-#     [7, 8, 9]
-# ]
-# matrice_transposee = transposer_matrice(matrice_originale)
-# print("Matrice originale :")
-# for ligne in matrice_originale:
-#     print(f"  {ligne}")
-# print("Matrice transposée :")
-# for ligne in matrice_transposee:
-#     print(f"  {ligne}")
-""")
-
-print("\n" + "=" * 50)
-print("11. RÉSUMÉ FINAL")
+print("10. RÉSUMÉ FINAL")
 print("=" * 50)
 
 print("""
