@@ -28,6 +28,26 @@
 
 ---
 
+## 🎮 Projets pratiques
+
+### 🏰 [The Legend of Turgut](001.The%20Legend%20Of%20Turgut%20%5BPygame%5D/README.md)
+
+![Pygame](https://img.shields.io/badge/Pygame-Jeu%202D-red?style=flat-square&logo=python)
+
+Jeu d'aventure 2D développé avec Pygame
+
+**Technologies :** Pygame, OOP, Gestion d'événements, Sprites
+
+### 🎯 [Le Pendu](002.Le%20pendu%20%5BTkinter%5D/README.md)
+
+![Tkinter](https://img.shields.io/badge/Tkinter-Interface%20GUI-blue?style=flat-square&logo=python)
+
+Jeu de devinettes avec interface graphique
+
+**Technologies :** Tkinter, JSON, Statistiques, UI/UX
+
+---
+
 ## 📚 Contenu du cours
 
 - **[`000` 🔧 Installation](000_installation.py)**  
@@ -253,26 +273,6 @@
   setuptools, pip, venv, pyinstaller (créer des .exe)
 
 ---
-
-## 🎮 Projets pratiques
-
-### 🏰 [The Legend of Turgut](001.The%20Legend%20Of%20Turgut%20%5BPygame%5D/README.md)
-
-![Pygame](https://img.shields.io/badge/Pygame-Jeu%202D-red?style=flat-square&logo=python)
-
-Jeu d'aventure 2D développé avec Pygame
-
-**Technologies :** Pygame, OOP, Gestion d'événements, Sprites
-
-### 🎯 [Le Pendu](002.Le%20pendu/README.md)
-
-![Tkinter](https://img.shields.io/badge/Tkinter-Interface%20GUI-blue?style=flat-square&logo=python)
-
-Jeu de devinettes avec interface graphique
-
-**Technologies :** Tkinter, JSON, Statistiques, UI/UX
-
---
 
 **Made with ❤️ by [la404family](https://github.com/la404family)**
 
