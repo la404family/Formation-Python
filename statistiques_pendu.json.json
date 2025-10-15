@@ -1,0 +1,12 @@
+{
+  "parties_jouees": 3,
+  "parties_gagnees": 3,
+  "parties_perdues": 0,
+  "pourcentage_victoire": 100.0,
+  "mot_le_plus_long": "",
+  "meilleur_score": 1,
+  "total_erreurs": 3,
+  "mots_trouves": [
+    ""
+  ]
+}

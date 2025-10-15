@@ -29,7 +29,7 @@ import sys
 import os
 
 # Importation des modules du jeu
-from ui_components import lancer_jeu
+from ui_components_matrix import lancer_jeu
 
 
 def main():
@@ -45,6 +45,10 @@ def main():
     print("=" * 40)
 
     try:
+        # Changement vers le répertoire du script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        os.chdir(script_dir)
+
         # Vérification des fichiers essentiels
         fichiers_requis = ["mots.json"]
         fichiers_manquants = []

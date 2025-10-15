@@ -4,133 +4,131 @@ Ce module gère l'état du jeu, les propositions de lettres et les dessins ASCII
 """
 
 import random
+import os
 from data_manager import DataManager, normaliser_texte
 
 
-class ASCIIArtManager:
+class AnimationManager:
     """
-    Classe qui gère l'art ASCII du pendu.
-    Contient les 7 états du pendu (de 0 à 6 erreurs).
+    Classe qui gère les animations du pendu.
+    Contient les chemins vers les 8 animations (de 0 à 7 erreurs).
     """
 
     def __init__(self):
         """
-        Initialise les dessins ASCII du pendu.
-        Chaque index correspond au nombre d'erreurs (0 = aucune erreur, 6 = pendu complet).
+        Initialise les chemins vers les animations du pendu.
+        Animation 1 = état initial (0 erreur)
+        Animation 7 = fin lors de l'échec (6 erreurs max)
         """
-        self.dessins = [
-            # 0 erreur - Potence vide
-            """
- ██▓███  
-▓██░  ██▒
-▓██░ ██▓▒
-▒██▄█▓▒ ▒
-▒██▒ ░  ░
-▒▓▒░ ░  ░
-░▒ ░     
-░░       
-            """,
+        # Chemin de base vers le dossier images
+        self.chemin_images = os.path.join(os.path.dirname(__file__), "images")
 
-            # 1 erreur - Tête
-            """
- ██▓███  ▓█████ 
-▓██░  ██▒▓█   ▀ 
-▓██░ ██▓▒▒███   
-▒██▄█▓▒ ▒▒▓█  ▄ 
-▒██▒ ░  ░░▒████▒
-▒▓▒░ ░  ░░░ ▒░ ░
-░▒ ░      ░ ░  ░
-░░          ░   
-            ░  ░
-            """,
+        # Liste des dossiers d'animations (animation01 a animation08)
+        # animation01-07 : erreurs (0 à 6)
+        # animation08 : victoire
+        self.animations = []
+        for i in range(1, 9):  # 1 à 8 inclus
+            dossier_animation = f"animation{i:02d}"
+            chemin_animation = os.path.join(
+                self.chemin_images, dossier_animation)
+            self.animations.append(chemin_animation)
 
-            # 2 erreurs - Corps
-            """
- ██▓███  ▓█████  ███▄    █ 
-▓██░  ██▒▓█   ▀  ██ ▀█   █ 
-▓██░ ██▓▒▒███   ▓██  ▀█ ██▒
-▒██▄█▓▒ ▒▒▓█  ▄ ▓██▒  ▐▌██▒
-▒██▒ ░  ░░▒████▒▒██░   ▓██░
-▒▓▒░ ░  ░░░ ▒░ ░░ ▒░   ▒ ▒ 
-░▒ ░      ░ ░  ░░ ░░   ░ ▒░
-░░          ░      ░   ░ ░ 
-            ░  ░         ░ 
-            """,
-
-            # 3 erreurs - Bras gauche
-            """
- ██▓███  ▓█████  ███▄    █ ▓█████▄ 
-▓██░  ██▒▓█   ▀  ██ ▀█   █ ▒██▀ ██▌
-▓██░ ██▓▒▒███   ▓██  ▀█ ██▒░██   █▌
-▒██▄█▓▒ ▒▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌
-▒██▒ ░  ░░▒████▒▒██░   ▓██░░▒████▓ 
-▒▓▒░ ░  ░░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ 
-░▒ ░      ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ 
-░░          ░      ░   ░ ░  ░ ░  ░ 
-            ░  ░         ░    ░    
-                            ░      
-            """,
-
-            # 4 erreurs - Bras droit
-            """
- ██▓███  ▓█████  ███▄    █ ▓█████▄  █    ██ 
-▓██░  ██▒▓█   ▀  ██ ▀█   █ ▒██▀ ██▌ ██  ▓██▒
-▓██░ ██▓▒▒███   ▓██  ▀█ ██▒░██   █▌▓██  ▒██░
-▒██▄█▓▒ ▒▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌▓▓█  ░██░
-▒██▒ ░  ░░▒████▒▒██░   ▓██░░▒████▓ ▒▒█████▓ 
-▒▓▒░ ░  ░░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░▒▓▒ ▒ ▒ 
-░▒ ░      ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ ░░▒░ ░ ░ 
-░░          ░      ░   ░ ░  ░ ░  ░  ░░░ ░ ░ 
-            ░  ░         ░    ░       ░     
-                            ░               
-            """,
-
-            # 5 erreurs - Jambe gauche
-            """
- ██▓███  ▓█████  ███▄    █ ▓█████▄  █    ██     ▐██▌
-▓██░  ██▒▓█   ▀  ██ ▀█   █ ▒██▀ ██▌ ██  ▓██▒    ▐██▌
-▓██░ ██▓▒▒███   ▓██  ▀█ ██▒░██   █▌▓██  ▒██░    ▐██▌
-▒██▄█▓▒ ▒▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌▓▓█  ░██░    ▓██▒
-▒██▒ ░  ░░▒████▒▒██░   ▓██░░▒████▓ ▒▒█████▓     ▒▄▄ 
-▒▓▒░ ░  ░░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░▒▓▒ ▒ ▒     ░▀▀▒
-░▒ ░      ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒ ░░▒░ ░ ░     ░  ░
-░░          ░      ░   ░ ░  ░ ░  ░  ░░░ ░ ░        ░
-            ░  ░         ░    ░       ░         ░   
-                            ░                       
-            """,
-
-            # 6 erreurs - Jambe droite (pendu complet)
-            """
- ██▀███        ██▓      ██▓███       
-▓██ ▒ ██▒     ▓██▒     ▓██░  ██▒     
-▓██ ░▄█ ▒     ▒██▒     ▓██░ ██▓▒     
-▒██▀▀█▄       ░██░     ▒██▄█▓▒ ▒     
-░██▓ ▒██▒ ██▓ ░██░ ██▓ ▒██▒ ░  ░     
-░ ▒▓ ░▒▓░ ▒▓▒ ░▓   ▒▓▒ ▒▓▒░ ░  ░     
-  ░▒ ░ ▒░ ░▒   ▒ ░ ░▒  ░▒ ░          
-  ░░   ░  ░    ▒ ░ ░   ░░            
-   ░       ░   ░    ░                
-           ░        ░                
-            """
-        ]
-
-    def obtenir_dessin(self, nb_erreurs):
+    def obtenir_chemin_animation(self, nb_erreurs):
         """
-        Retourne le dessin ASCII correspondant au nombre d'erreurs.
+        Retourne le chemin vers le dossier d'animation correspondant au nombre d'erreurs.
 
         Args:
             nb_erreurs (int): Nombre d'erreurs (0 à 6)
 
         Returns:
-            str: Le dessin ASCII du pendu
+            str: Chemin vers le dossier d'animation
         """
         # S'assure que le nombre d'erreurs est dans la plage valide
         if nb_erreurs < 0:
             nb_erreurs = 0
-        elif nb_erreurs > 6:
+        elif nb_erreurs > 6:  # Maintenant 6 erreurs max (7 animations)
             nb_erreurs = 6
 
-        return self.dessins[nb_erreurs]
+        return self.animations[nb_erreurs]
+
+    def lister_images_animation(self, nb_erreurs):
+        """
+        Retourne la liste des fichiers images dans le dossier d'animation.
+
+        Args:
+            nb_erreurs (int): Nombre d'erreurs (0 à 6)
+
+        Returns:
+            list: Liste des chemins vers les images de l'animation
+        """
+        dossier_animation = self.obtenir_chemin_animation(nb_erreurs)
+
+        if not os.path.exists(dossier_animation):
+            return []
+
+        # Extensions d'images supportées
+        extensions_images = {'.png', '.jpg', '.jpeg', '.gif', '.bmp'}
+
+        images = []
+        try:
+            fichiers = os.listdir(dossier_animation)
+            for fichier in sorted(fichiers):  # Tri pour ordre cohérent
+                if any(fichier.lower().endswith(ext) for ext in extensions_images):
+                    chemin_complet = os.path.join(dossier_animation, fichier)
+                    images.append(chemin_complet)
+        except OSError:
+            pass  # Dossier inaccessible
+
+        return images
+
+    def obtenir_animation_victoire(self):
+        """
+        Retourne le chemin vers le dossier d'animation de victoire (animation8).
+
+        Returns:
+            str: Chemin vers le dossier d'animation de victoire
+        """
+        # Le dossier de victoire s'appelle "animation8" (sans le 0)
+        return os.path.join(self.chemin_images, "animation8")
+
+    def lister_images_animation_victoire(self):
+        """
+        Retourne la liste des fichiers images dans le dossier d'animation de victoire.
+
+        Returns:
+            list: Liste des chemins vers les images de l'animation de victoire
+        """
+        dossier_animation = self.obtenir_animation_victoire()
+
+        if not os.path.exists(dossier_animation):
+            return []
+
+        # Extensions d'images supportées
+        extensions_images = {'.png', '.jpg', '.jpeg', '.gif', '.bmp'}
+
+        images = []
+        try:
+            fichiers = os.listdir(dossier_animation)
+            for fichier in sorted(fichiers):  # Tri pour ordre cohérent
+                if any(fichier.lower().endswith(ext) for ext in extensions_images):
+                    chemin_complet = os.path.join(dossier_animation, fichier)
+                    images.append(chemin_complet)
+        except OSError:
+            pass  # Dossier inaccessible
+
+        return images
+
+    def obtenir_dessin(self, nb_erreurs):
+        """
+        Retourne le chemin vers le dossier d'animation correspondant au nombre d'erreurs.
+
+        Args:
+            nb_erreurs (int): Nombre d'erreurs (0 à 6)
+
+        Returns:
+            str: Chemin vers le dossier d'animation du pendu
+        """
+        return self.obtenir_chemin_animation(nb_erreurs)
 
 
 class GameManager:
@@ -146,8 +144,8 @@ class GameManager:
         # Gestionnaire de données pour charger les mots et stats
         self.data_manager = DataManager()
 
-        # Gestionnaire d'art ASCII
-        self.ascii_art = ASCIIArtManager()
+        # Gestionnaire d'animations
+        self.animation_manager = AnimationManager()
 
         # Variables de jeu - seront initialisées lors d'une nouvelle partie
         self.mot_secret = ""           # Le mot à deviner (normalisé)
@@ -157,7 +155,8 @@ class GameManager:
         self.lettres_correctes = set()  # Ensemble des lettres correctes trouvées
         self.lettres_incorrectes = set()  # Ensemble des lettres incorrectes
         self.erreurs = 0               # Nombre d'erreurs actuelles
-        self.max_erreurs = 6           # Nombre maximum d'erreurs autorisées
+        # Nombre maximum d'erreurs autorisées (7 animations : 0 à 6)
+        self.max_erreurs = 6
 
         # État du jeu
         self.partie_terminee = False   # True si la partie est finie
@@ -301,6 +300,10 @@ class GameManager:
         lettres_du_mot = set(
             lettre for lettre in self.mot_secret if lettre.isalpha())
 
+        # Vérifie qu'il y a bien des lettres dans le mot
+        if not lettres_du_mot:
+            return False
+
         # Vérifie si toutes les lettres ont été trouvées
         return lettres_du_mot.issubset(self.lettres_correctes)
 
@@ -341,12 +344,39 @@ class GameManager:
 
     def obtenir_dessin_pendu(self):
         """
-        Retourne le dessin ASCII du pendu correspondant au nombre d'erreurs actuel.
+        Retourne le chemin vers le dossier d'animation du pendu correspondant au nombre d'erreurs actuel.
 
         Returns:
-            str: Le dessin ASCII du pendu
+            str: Chemin vers le dossier d'animation du pendu
         """
-        return self.ascii_art.obtenir_dessin(self.erreurs)
+        return self.animation_manager.obtenir_dessin(self.erreurs)
+
+    def obtenir_images_animation(self):
+        """
+        Retourne la liste des images de l'animation correspondant au nombre d'erreurs actuel.
+
+        Returns:
+            list: Liste des chemins vers les images de l'animation
+        """
+        return self.animation_manager.lister_images_animation(self.erreurs)
+
+    def obtenir_animation_victoire(self):
+        """
+        Retourne le chemin vers le dossier d'animation de victoire.
+
+        Returns:
+            str: Chemin vers le dossier d'animation de victoire
+        """
+        return self.animation_manager.obtenir_animation_victoire()
+
+    def obtenir_images_animation_victoire(self):
+        """
+        Retourne la liste des images de l'animation de victoire.
+
+        Returns:
+            list: Liste des chemins vers les images de l'animation de victoire
+        """
+        return self.animation_manager.lister_images_animation_victoire()
 
     def obtenir_info_jeu(self):
         """
@@ -362,7 +392,8 @@ class GameManager:
             "erreurs": self.erreurs,
             "max_erreurs": self.max_erreurs,
             "lettres_essayees": self.obtenir_lettres_essayees_formatees(),
-            "dessin_pendu": self.obtenir_dessin_pendu(),
+            "dossier_animation": self.obtenir_dessin_pendu(),
+            "images_animation": self.obtenir_images_animation(),
             "est_gagne": self.est_gagne(),
             "est_perdu": self.est_perdu(),
             "partie_terminee": self.partie_terminee
