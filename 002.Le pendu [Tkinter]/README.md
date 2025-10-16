@@ -225,5 +225,3 @@ Le jeu utilise plusieurs fichiers de configuration :
 - 🎯 **Observez la longueur** du mot pour deviner le type
 - 📊 **Consultez vos statistiques** pour améliorer votre stratégie
 - 🤔 **Attention aux mots avec accents** : ils sont normalisés (été → ETE)
-
-**Projet développé dans le cadre de la Formation Python**
