@@ -34,9 +34,81 @@
 
 ![Pygame](https://img.shields.io/badge/Pygame-Jeu%202D-red?style=flat-square&logo=python)
 
-Jeu d'aventure 2D développé avec Pygame
+Jeu d'aventure 2D développé avec Pygame - RPG rétro avec héros nomade turc
 
-**Technologies :** Pygame, OOP, Gestion d'événements, Sprites
+**Technologies :** Pygame, OOP, Architecture modulaire, Gestion manette/clavier, Caméra avec zoom
+
+#### 🏗️ Architecture du Projet
+
+**Structure modulaire** organisée en classes spécialisées :
+
+```text
+001.The Legend Of Turgut [Pygame]/
+├── main.py                    # Point d'entrée et boucle principale
+├── classes/                   # Architecture orientée objet
+│   ├── level.py              # Gestionnaire de niveau et monde
+│   ├── player.py             # Héros Turgut (déplacement, combat, animation)
+│   ├── entity.py             # Classe mère (déplacement, collisions)
+│   ├── enemy.py              # Intelligence artificielle des ennemis
+│   ├── camera.py             # Caméra avec zoom x4 et tri Y-sort
+│   ├── weapon.py             # Système d'armes (4 types d'attaques)
+│   ├── joystick.py           # Gestionnaire de manette de jeu
+│   ├── keyboard.py           # Gestionnaire de clavier
+│   ├── tile.py               # Tuiles et obstacles de la carte
+│   └── ui.py                 # Interface utilisateur (barres de vie/énergie)
+├── settings/                  # Configuration centralisée
+│   └── settings.py           # Constantes, données armes, positions
+├── functions/                 # Utilitaires système
+│   ├── get_os_adapted_path.py # Chemins multi-plateforme
+│   ├── get_screen_dimensions.py # Adaptation écran automatique
+│   ├── debug.py              # Système de débogage visuel
+│   └── apply_font.py         # Gestion des polices rétro
+├── assets/ imagesOfMaps/     # Ressources graphiques
+├── sounds/                   # Effets sonores
+└── font/                     # Police pixel-art rétro
+```
+
+#### 🎮 Système de Contrôles Hybride (Clavier + Manette)
+
+**Gestion simultanée** clavier et manette Xbox/PlayStation :
+
+- **Détection automatique** : La manette est détectée au démarrage
+- **Priorité intelligente** : Le clavier a priorité sur la manette pour éviter les conflits
+- **Déplacement anti-diagonal** : Un seul axe à la fois (haut/bas OU gauche/droite)
+- **4 armes mappées** : Touches U/I/J/K (clavier) ou boutons 0/1/2/3 (manette)
+- **Course** : Touches O/P/L/M (clavier) ou gâchettes L2/R2 (manette)
+
+**Code technique manette** :
+
+```python
+# Détection axes analogiques avec zone morte
+if joystick and self.direction.length() == 0:
+    joystick_x = joystick.get_axis(0)  # Stick gauche X
+    joystick_y = joystick.get_axis(1)  # Stick gauche Y
+
+    # Priorité à l'axe dominant (pas de diagonale)
+    if abs(joystick_x) > abs(joystick_y):
+        if joystick_x < -0.5: self.direction.x = -1  # Gauche
+        elif joystick_x > 0.5: self.direction.x = 1  # Droite
+```
+
+#### ⚔️ Système de Combat Avancé
+
+**4 types d'attaques** avec animations mathématiques :
+
+- **Hache1** : Attaque circulaire (rotation 360°)
+- **Hache2** : Attaque droite (projection linéaire)
+- **Hache3** : Attaque en dent de scie (pattern sinusoïdal)
+- **Hache4** : Attaque en S (courbe paramétrique complexe)
+
+#### 🎯 Fonctionnalités Techniques
+
+- **Caméra intelligente** : Zoom x4, tri Y-sort pour profondeur
+- **Détection de collisions** : Hitbox séparée du sprite pour précision
+- **Animation fluide** : 60 FPS avec gestion frame-rate indépendante
+- **Chargement de carte** : Analyse pixel par pixel des images PNG
+- **Système de debug** : Affichage temps réel des informations
+- **Adaptation écran** : Redimensionnement automatique selon résolution
 
 ### 🎯 [Le Pendu](002.Le%20pendu%20%5BTkinter%5D/README.md)
 
